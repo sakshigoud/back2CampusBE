@@ -41,11 +41,12 @@ const alumniSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Password is required'],
     minlength: [6, 'Password must be at least 6 characters'],
-    select: false // Don't include password in queries by default
+    select: false
   }
 }, {
   timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
+
 
 alumniSchema.pre('save', async function(next) {
   if (!this.isModified('password')) return next();
@@ -58,6 +59,7 @@ alumniSchema.pre('save', async function(next) {
     next(error);
   }
 });
+
 
 alumniSchema.methods.comparePassword = async function(candidatePassword) {
   try {
