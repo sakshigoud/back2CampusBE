@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
-const Alumni = require('../models/Alumni');
-const Department = require('../models/Department');
+const Alumni = require('../models/alumniSchema');
+const Department = require('../models/departmentSchema');
 
 
 const generateToken = (id) => {

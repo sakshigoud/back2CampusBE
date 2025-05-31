@@ -5,8 +5,8 @@ const {
   login,
   getProfile,
   updateProfile
-} = require('../controllers/authController');
-const { authenticateAlumni } = require('../middleware/auth');
+} = require('../controller/authController.js');
+const { authenticateAlumni } = require('../middleware/auth.js');
 
 router.post('/register', register);
 router.post('/login', login);

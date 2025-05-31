@@ -4,7 +4,7 @@ const {
   getAllAnnouncements,
   getAnnouncementById,
   createAnnouncement,
-} = require('../controllers/announcementController');
+} = require('../controller/announcementController');
 const { authenticateAlumni } = require('../middleware/auth');
 
 router.get('/', getAllAnnouncements);

@@ -1,4 +1,4 @@
-const Announcement = require('../models/Announcement');
+const Announcement = require('../models/announcementSchema');
 
 
 const getAllAnnouncements = async (req, res) => {

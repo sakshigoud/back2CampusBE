@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const Alumni = require('../models/Alumni');
+const Alumni = require('../models/alumniSchema');
 
 const authenticateAlumni = async (req, res, next) => {
   try {
